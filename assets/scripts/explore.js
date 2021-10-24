@@ -1,18 +1,23 @@
 // explore.js
-var synth = window.speechSynthesis;
-var Button= document.querySelector('button');
-var inputTxt = document.querySelector('#text-to-speak');
-var voiceSelect = document.querySelector('select');
-var voices = [];
 
 window.addEventListener('DOMContentLoaded', init);
+var synth = window.speechSynthesis;
+var Button= document.querySelector('button');
+var inputTxt = document.getElementById("text-to-speak");
+var voiceSelect = document.getElementById("voice-select");
+var voices = [];
 
 function init() {
   voiceList();
   if (speechSynthesis.onvoiceschanged !== undefined) {
-    speechSynthesis.onvoiceschanged = voiceList;
+   speechSynthesis.onvoiceschanged = voiceList;
   }
 }
+
+(function(window) {
+
+}) (this);
+
 
 function voiceList() {
   voices = synth.getVoices().sort(function (a, b) {
@@ -36,6 +41,10 @@ function voiceList() {
     voiceSelect.appendChild(option);
   }
   voiceSelect.selectedIndex = selectedIndex;
+}
+voiceList();
+  if (speechSynthesis.onvoiceschanged !== undefined) {
+    speechSynthesis.onvoiceschanged = voiceList;
 }
 
 function speak(){
@@ -62,10 +71,10 @@ function speak(){
   }
 }
 
-Button.onclick = function(event) {
-  event.preventDefault();
+//Button.onclick = function(event) {
+  //event.preventDefault();
 
-  speak();
+  //speak();
 
-  inputTxt.blur();
-}
+  //inputTxt.blur();
+//}
