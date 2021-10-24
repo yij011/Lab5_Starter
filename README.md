@@ -2,7 +2,8 @@
 # Lab member:
 ## Yixin Jiang
 ## Dongyang Huang
-https://lab.github.com/githubtraining/github-actions:-continuous-integration
+# Issue link
+https://github.com/yij011/github-actions-for-ci/issues/7#issue-1034379822
 # Expose:
 
 # Explore:
